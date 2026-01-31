@@ -41,10 +41,10 @@ public class MeditationFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_meditation, container, false);
 
-        meditationVideo = view.findViewById(R.id.meditationVideo);
+        meditationVideo = view.findViewById(R.id.meditationvideo1);
         playPauseButton = view.findViewById(R.id.playPauseButton);
 
-        meditationVideo.setVideoURI(Uri.parse("android.resource://" + requireContext().getPackageName() + "/" + R.raw.meditation_video));
+        meditationVideo.setVideoURI(Uri.parse("android.resource://" + requireContext().getPackageName() + "/" + R.raw.meditaionvideo1));
         meditationVideo.setOnPreparedListener(mp -> mp.setLooping(true));
         meditationVideo.start();
 
@@ -85,9 +85,9 @@ public class MeditationFragment extends Fragment {
         nasheedList.add(new AudioTrack("Nasheed 4", R.raw.nasheed4, R.drawable.nasheed4));
 
         musicList.add(new AudioTrack("Meditation 1", R.raw.meditation1, R.drawable.musicbag));
-        musicList.add(new AudioTrack("Meditation 2", R.raw.meditation2, R.drawable.musicbag));
-        musicList.add(new AudioTrack("Meditation 3", R.raw.meditation3, R.drawable.musicbag));
-        musicList.add(new AudioTrack("Meditation 4", R.raw.meditation4, R.drawable.musicbag));
+        musicList.add(new AudioTrack("Meditation 2", R.raw.meditation2, R.drawable.musicbag1));
+        musicList.add(new AudioTrack("Meditation 3", R.raw.meditation3, R.drawable.musicbag2));
+        musicList.add(new AudioTrack("Meditation 4", R.raw.meditation4, R.drawable.musicbag3));
 
         videoList.add(new VideoTrack("Relaxing Video 1", R.raw.relax_video));
         videoList.add(new VideoTrack("Relaxing Video 2", R.raw.relax_video));

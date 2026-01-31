@@ -21,7 +21,7 @@
             android:layout_marginBottom="16dp">
 
             <VideoView
-                android:id="@+id/meditationVideo"
+                android:id="@+id/meditationvideo1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 

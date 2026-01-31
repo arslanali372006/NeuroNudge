@@ -2,32 +2,65 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/AppBackgroundColor"
+    android:background="@color/sky_blue"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- GPT Response Box -->
-<TextView
-android:id="@+id/gptResponseBox"
-android:layout_width="match_parent"
-android:layout_height="0dp"
-android:layout_weight="1"
-android:background="@drawable/bg_response"
-android:padding="16dp"
-android:text="GPT responses will appear here..."
-android:textColor="@color/PrimaryTextColor"
-android:textSize="16sp" />
+    <!-- GPT Response Scrollable Box -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_response"
+        android:padding="12dp"
+        android:scrollbars="vertical">
 
-    <!-- GPT Prompt Input -->
-<EditText
-android:id="@+id/gptPromptInput"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:hint="Ask something..."
-android:background="@drawable/bg_prompt"
-android:padding="12dp"
-android:textColor="@color/PrimaryTextColor"
-android:textSize="16sp"
-android:layout_marginTop="12dp" />
+        <TextView
+            android:id="@+id/gptResponseBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="HealthBot responses will appear here..."
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </ScrollView>
 
+    <!-- Input Row: EditText + Send Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/gptPromptInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Ask something..."
+            android:background="@drawable/bg_prompt"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:imeOptions="actionDone"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:backgroundTint="#305CDE"
+            android:layout_marginStart="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp" />
     </LinearLayout>
+
+    <!-- Loading Indicator -->
+    <ProgressBar
+        android:id="@+id/loadingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+</LinearLayout>

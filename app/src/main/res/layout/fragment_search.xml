@@ -161,7 +161,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Save Info"
-        android:backgroundTint="@color/PrimaryTextColor"
+        android:backgroundTint="#305CDE"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 </LinearLayout>

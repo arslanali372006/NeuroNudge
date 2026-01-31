@@ -8,6 +8,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
         applicationId = "com.example.neuronudge"
         minSdk = 24
         targetSdk = 35
@@ -55,4 +56,7 @@ dependencies {
     implementation (libs.lottie)
     implementation (libs.circleimageview)
     implementation (libs.materialdrawer)
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation("org.json:json:20210307")
+
 }

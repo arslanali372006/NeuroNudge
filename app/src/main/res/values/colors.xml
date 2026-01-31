@@ -8,7 +8,10 @@
     <color name="gray_500">#9E9E9E</color>
     <color name="gray_600">#757575</color>
     <color name="splash_background">#6200EE</color>
-    <color name="dark_blue">#03055B</color>
+    <color name="dark_blue">#7ED1FF</color>
+    <color name="sky_blue">#D9F4FF</color>
+    <color name="blue">#03055B</color>
+    <color name="blue2">#305CDE</color>
     <!-- Selected Color -->
     <color name="colorSelected">#03055B</color> <!-- You can choose a color like Orange -->
 
